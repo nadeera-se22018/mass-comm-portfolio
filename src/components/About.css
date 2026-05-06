@@ -3,15 +3,108 @@
 }
 
 .about-content {
-  padding: 3rem;
+  padding: 4rem;
   border-radius: 20px;
-  text-align: center;
+}
+
+.about-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.about-text-container {
+  flex: 1;
+}
+
+.greeting {
+  font-size: 2rem;
+  font-family: 'Playfair Display', serif;
+  color: var(--accent-pink-dark);
+  display: block;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.highlight-text {
+  color: var(--text-charcoal);
+  font-weight: 600;
+  border-bottom: 2px solid rgba(251, 113, 133, 0.3);
+  transition: border-color 0.3s ease;
+}
+
+.highlight-text:hover {
+  border-bottom-color: var(--accent-pink);
 }
 
 .about-text {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 1.15rem;
+  line-height: 1.9;
   color: var(--text-color);
-  max-width: 800px;
-  margin: 0 auto;
+}
+
+.about-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  position: relative;
+  z-index: 1;
+}
+
+.image-blob-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  background: radial-gradient(circle, rgba(251, 113, 133, 0.4) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(20px);
+  animation: pulseBlob 6s ease-in-out infinite alternate;
+}
+
+@keyframes pulseBlob {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+  100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.8; }
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 30px rgba(255, 107, 107, 0.15));
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.03) translateY(-10px);
+  filter: drop-shadow(0 25px 35px rgba(255, 107, 107, 0.25));
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    flex-direction: column; /* Image on top, text on bottom */
+    text-align: center;
+    gap: 3rem;
+  }
+  
+  .about-text-container h2, 
+  .about-text-container p {
+    text-align: center !important;
+  }
+
+  .greeting {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .about-content {
+    padding: 2.5rem;
+  }
 }

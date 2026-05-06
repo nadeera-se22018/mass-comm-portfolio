@@ -7,7 +7,8 @@ const portfolioItems = [
     category: 'Direction',
     title: 'Short Film Direction',
     description: 'Showcasing my vision as a director.',
-    date: 'Recent'
+    date: 'Recent',
+    link: 'https://www.facebook.com/share/v/1DTmqr4FFq/'
   },
   {
     id: 2,
@@ -41,8 +42,14 @@ const ContentCards = () => {
               <h3 className="card-title">{item.title}</h3>
               <p className="card-description">{item.description}</p>
               <div className="card-footer">
-                <span className="card-date">{item.date}</span>
-                <a href="#" className="card-link">Read More &rarr;</a>
+                <a 
+                  href={item.link || "#"} 
+                  className="card-link"
+                  target={item.link ? "_blank" : "_self"}
+                  rel={item.link ? "noopener noreferrer" : ""}
+                >
+                  Read More &rarr;
+                </a>
               </div>
             </div>
           ))}
