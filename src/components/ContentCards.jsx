@@ -4,24 +4,24 @@ import './ContentCards.css';
 const portfolioItems = [
   {
     id: 1,
-    category: 'Article',
-    title: 'The Digital Shift: Modern Journalism',
-    description: 'An in-depth analysis of how social media platforms are reshaping news consumption habits among Gen Z.',
-    date: 'Oct 2025'
+    category: 'Direction',
+    title: 'Short Film Direction',
+    description: 'Showcasing my vision as a director.',
+    date: 'Recent'
   },
   {
     id: 2,
-    category: 'Video',
-    title: 'Voices of Campus: Student Doc',
-    description: 'A short documentary exploring the diverse backgrounds and stories of our university community.',
-    date: 'Dec 2025'
+    category: 'Writing',
+    title: 'Journalism & Publications',
+    description: 'Feature articles and creative writing.',
+    date: 'Recent'
   },
   {
     id: 3,
-    category: 'Campaign',
-    title: 'Eco-Awareness Social Strategy',
-    description: 'A comprehensive social media strategy designed to promote sustainability initiatives on campus.',
-    date: 'Feb 2026'
+    category: 'PR & Media',
+    title: 'Mass Communication Projects',
+    description: 'Public Relations and media campaigns.',
+    date: 'Recent'
   }
 ];
 
