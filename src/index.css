@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg-cream: #FDFBF7;
+  --bg-cream-alt: #F5EFEB;
+  --accent-pink: #FADADD;
+  --accent-pink-dark: #E2B6BA;
+  --text-charcoal: #36454F;
+  --text-light: #6A7B87;
+  --white: #FFFFFF;
+  --glass-bg: rgba(255, 255, 255, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --shadow-color: rgba(54, 69, 79, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-cream);
+  color: var(--text-charcoal);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Glassmorphism Utility */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 40px var(--shadow-color);
+  border-radius: 20px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--text-charcoal);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-pink-dark);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-charcoal);
+  border: 1px solid var(--text-charcoal);
+}
+
+.btn-secondary:hover {
+  background-color: var(--text-charcoal);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* Base sections */
+section {
+  padding: 6rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  section {
+    padding: 4rem 0;
+  }
+}

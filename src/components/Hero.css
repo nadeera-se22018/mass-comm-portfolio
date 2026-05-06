@@ -1,0 +1,144 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 5rem;
+  background: radial-gradient(circle at 70% 30%, var(--accent-pink) 0%, transparent 40%),
+              radial-gradient(circle at 20% 80%, var(--bg-cream-alt) 0%, transparent 40%);
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.title {
+  font-size: 4.5rem;
+  line-height: 1.1;
+  color: var(--text-charcoal);
+  margin-bottom: 1rem;
+}
+
+.profession {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--text-charcoal);
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  font-style: italic;
+  color: var(--accent-pink-dark);
+}
+
+.description {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 2.5rem;
+  max-width: 90%;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 4/5;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.floating-badge {
+  position: absolute;
+  padding: 0.8rem 1.2rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text-charcoal);
+}
+
+.badge-1 {
+  top: 10%;
+  left: -10%;
+  animation: float 4s ease-in-out infinite;
+}
+
+.badge-2 {
+  bottom: 15%;
+  right: -10%;
+  animation: float 5s ease-in-out infinite 1s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 8rem;
+  }
+  
+  .description {
+    margin: 0 auto 2.5rem auto;
+  }
+  
+  .hero-cta {
+    justify-content: center;
+  }
+  
+  .title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 2.8rem;
+  }
+  .profession {
+    font-size: 1.5rem;
+  }
+  .floating-badge {
+    display: none;
+  }
+}
