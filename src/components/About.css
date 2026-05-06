@@ -107,4 +107,9 @@
   .about-content {
     padding: 2.5rem;
   }
+  
+  .about-image-container {
+    max-width: 300px; /* Reduce width so height scales down proportionally */
+    margin: 0 auto;
+  }
 }

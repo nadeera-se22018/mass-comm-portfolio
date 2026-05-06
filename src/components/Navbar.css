@@ -63,8 +63,62 @@
   width: 100%;
 }
 
+.mobile-toggle {
+  display: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.mobile-only-btn {
+  display: none;
+}
+
 @media (max-width: 768px) {
-  .nav-links, .nav-btn {
+  .mobile-toggle {
+    display: block;
+  }
+  
+  .desktop-only {
     display: none;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-left: 1px solid var(--glass-border);
+    flex-direction: column;
+    padding: 6rem 2rem 2rem 2rem;
+    gap: 2rem;
+    transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-links.active {
+    right: 0;
+  }
+  
+  .nav-links a {
+    font-size: 1.1rem;
+    display: block;
+  }
+  
+  .mobile-only-btn {
+    display: block;
+    margin-top: 1rem;
+  }
+  
+  .mobile-only-btn a {
+    text-align: center;
+    color: var(--bg-cream) !important;
+  }
+  
+  .mobile-only-btn a::after {
+    display: none; /* Remove the pink underline hover effect from the button */
   }
 }
