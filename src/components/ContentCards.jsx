@@ -8,21 +8,24 @@ const portfolioItems = [
     title: 'Short Film Direction',
     description: 'Showcasing my vision as a director.',
     date: 'Recent',
-    link: 'https://www.facebook.com/share/v/1DTmqr4FFq/'
+    link: 'https://www.facebook.com/share/v/1DTmqr4FFq/',
+    linkText: 'Watch Now'
   },
   {
     id: 2,
     category: 'Writing',
     title: 'Journalism & Publications',
     description: 'Feature articles and creative writing.',
-    date: 'Recent'
+    date: 'Recent',
+    linkText: 'Read More'
   },
   {
     id: 3,
     category: 'PR & Media',
     title: 'Mass Communication Projects',
     description: 'Public Relations and media campaigns.',
-    date: 'Recent'
+    date: 'Recent',
+    linkText: 'Read More'
   }
 ];
 
@@ -48,7 +51,7 @@ const ContentCards = () => {
                   target={item.link ? "_blank" : "_self"}
                   rel={item.link ? "noopener noreferrer" : ""}
                 >
-                  Read More &rarr;
+                  {item.linkText} &rarr;
                 </a>
               </div>
             </div>
