@@ -100,4 +100,13 @@ section {
   section {
     padding: 4rem 0;
   }
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 1rem;
+  }
 }

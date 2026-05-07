@@ -110,4 +110,16 @@
   .skill-card-wrapper {
     flex: 0 0 100%; /* Show 1 item per view on mobile */
   }
+  .skill-image-container {
+    height: 200px;
+  }
+  .skill-content {
+    padding: 1.5rem;
+  }
+  .skill-name {
+    font-size: 1.3rem;
+  }
+  .skill-description {
+    font-size: 0.95rem;
+  }
 }

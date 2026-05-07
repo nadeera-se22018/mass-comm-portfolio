@@ -115,7 +115,7 @@
   .hero-container {
     flex-direction: column-reverse; /* Show image on top of text in mobile */
     text-align: center;
-    padding-top: 8rem;
+    padding-top: 2rem;
   }
   
   .description {
@@ -140,5 +140,10 @@
   }
   .floating-badge {
     display: none;
+  }
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 1rem;
   }
 }
