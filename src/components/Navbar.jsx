@@ -22,6 +22,14 @@ const Navbar = () => {
       <div className="container nav-container">
         <a href="#" className="logo">Hashara<span>.</span></a>
         
+        <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
+          <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
+          <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
+          <li><a href="#work" onClick={() => setMenuOpen(false)}>Portfolio</a></li>
+          <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
+          <li className="mobile-only-btn"><a href="#contact" className="btn btn-primary" onClick={() => setMenuOpen(false)}>Hire Me</a></li>
+        </ul>
+
         <div className="mobile-toggle" onClick={toggleMenu}>
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#36454F" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
             {menuOpen ? (
@@ -31,14 +39,6 @@ const Navbar = () => {
             )}
           </svg>
         </div>
-
-        <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
-          <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
-          <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
-          <li><a href="#work" onClick={() => setMenuOpen(false)}>Portfolio</a></li>
-          <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
-          <li className="mobile-only-btn"><a href="#contact" className="btn btn-primary" onClick={() => setMenuOpen(false)}>Hire Me</a></li>
-        </ul>
         
         <a href="#contact" className="btn btn-primary nav-btn desktop-only">Hire Me</a>
       </div>
