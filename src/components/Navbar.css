@@ -67,6 +67,14 @@
   display: none;
   cursor: pointer;
   z-index: 1001;
+  color: var(--text-charcoal);
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.mobile-toggle:hover {
+  color: var(--accent-pink-dark);
 }
 
 .mobile-only-btn {
@@ -75,7 +83,7 @@
 
 @media (max-width: 768px) {
   .mobile-toggle {
-    display: block;
+    display: flex;
   }
   
   .desktop-only {
