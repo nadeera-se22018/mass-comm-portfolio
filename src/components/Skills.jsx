@@ -43,9 +43,22 @@ const skillsData = [
 const Skills = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [itemsToShow, setItemsToShow] = useState(2);
   
-  // Show 2 items per view because the cards are bigger now
-  const itemsToShow = 2;
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setItemsToShow(1);
+      } else {
+        setItemsToShow(2);
+      }
+    };
+    
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const maxIndex = Math.max(0, skillsData.length - itemsToShow);
 
   useEffect(() => {
@@ -53,7 +66,7 @@ const Skills = () => {
     if (!isHovered) {
       interval = setInterval(() => {
         setCurrentIndex((prevIndex) => (prevIndex >= maxIndex ? 0 : prevIndex + 1));
-      }, 4000); // Slightly slower for more reading time
+      }, 4000);
     }
     return () => clearInterval(interval);
   }, [isHovered, maxIndex]);
