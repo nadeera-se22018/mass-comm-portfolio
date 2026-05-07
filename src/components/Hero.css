@@ -112,10 +112,18 @@
 }
 
 @media (max-width: 992px) {
+  .hero {
+    min-height: auto;
+    align-items: flex-start;
+    padding-top: 4.5rem;
+    padding-bottom: 3rem;
+  }
+
   .hero-container {
     flex-direction: column-reverse; /* Show image on top of text in mobile */
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 0;
+    gap: 2rem;
   }
   
   .description {
