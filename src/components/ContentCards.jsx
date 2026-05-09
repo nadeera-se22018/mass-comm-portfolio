@@ -17,6 +17,7 @@ const portfolioItems = [
     title: 'Journalism & Publications',
     description: 'Feature articles and creative writing.',
     date: 'Recent',
+    link: 'https://medium.com/@hasharapinnawala2/the-digital-canvas-how-modern-storytelling-is-reshaping-human-connection-3d5ab50658ed',
     linkText: 'Read More'
   },
   {
