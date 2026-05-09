@@ -1,6 +1,6 @@
 import React from 'react';
 import './Hero.css';
-import hasharaImg from '../assets/hashara-profile.jpg';
+import hasharaImg from '../assets/hashara-profile2.jpg';
 
 const Hero = () => {
   return (
@@ -17,11 +17,11 @@ const Hero = () => {
         </div>
         
         <div className="hero-image-wrapper">
-          <div className="hero-image glass" style={{ padding: '0', border: '5px solid rgba(255,255,255,0.3)', borderRadius: '20px' }}>
+          <div className="hero-image modern-profile-wrapper">
             <img 
               src={hasharaImg} 
               alt="Hashara Sandamini - Profile" 
-              style={{ width: '100%', height: '100%', objectFit: 'cover', minHeight: '400px', display: 'block', borderRadius: '15px' }} 
+              className="modern-profile-img"
             />
             <div className="floating-badge badge-1 glass">
               <span>🎙️ Voice Artist</span>
