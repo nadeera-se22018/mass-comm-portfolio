@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import ContentCards from './components/ContentCards';
+import Gallery from './components/Gallery';
 import Footer from './components/Footer';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Hero />
         <About />
         <Skills />
+        <Gallery />
         <ContentCards />
       </main>
       <Footer />
