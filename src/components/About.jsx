@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import aboutImg from '../assets/abouthash.png';
+import aboutImg from '../assets/About-hashara2.jpg';
 
 const About = () => {
   return (
@@ -10,7 +10,9 @@ const About = () => {
           <div className="about-grid">
             <div className="about-image-container">
               <div className="image-blob-bg"></div>
-              <img src={aboutImg} alt="Hashara Sandamini" className="about-image" />
+              <div className="modern-about-wrapper">
+                <img src={aboutImg} alt="Hashara Sandamini" className="modern-about-image" />
+              </div>
             </div>
             <div className="about-text-container">
               <h2 className="section-title" style={{ textAlign: 'left' }}>About Me</h2>
