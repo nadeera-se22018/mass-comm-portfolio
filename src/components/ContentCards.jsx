@@ -26,7 +26,8 @@ const portfolioItems = [
     title: 'Mass Communication Projects',
     description: 'Public Relations and media campaigns.',
     date: 'Recent',
-    linkText: 'Read More'
+    link: 'https://youtu.be/BiOfs2vF9Fc?si=Dp1yN0QF9Y2BHQ4V',
+    linkText: 'Watch Now'
   }
 ];
 
@@ -38,7 +39,7 @@ const ContentCards = () => {
           <h2 className="section-title">Selected Works</h2>
           <p className="section-subtitle">A collection of my recent projects in writing, media, and strategy.</p>
         </div>
-        
+
         <div className="cards-grid">
           {portfolioItems.map((item) => (
             <div key={item.id} className="card glass">
@@ -46,8 +47,8 @@ const ContentCards = () => {
               <h3 className="card-title">{item.title}</h3>
               <p className="card-description">{item.description}</p>
               <div className="card-footer">
-                <a 
-                  href={item.link || "#"} 
+                <a
+                  href={item.link || "#"}
                   className="card-link"
                   target={item.link ? "_blank" : "_self"}
                   rel={item.link ? "noopener noreferrer" : ""}
