@@ -4,6 +4,9 @@ import img1 from '../assets/HGalleryimage1.jpeg';
 import img2 from '../assets/HGalleryimage2.jpg';
 import img3 from '../assets/HGalleryimage3.jpg';
 import img4 from '../assets/HGalleryimage4.jpg';
+import sriyanthaImg from '../assets/Mr. Shriyantha.jpeg';
+import wasanthaImg from '../assets/Mr. Wasantha.jpeg';
+import rasadareeImg from '../assets/Ms. Rasadaree.jpeg';
 
 const galleryData = [
   {
@@ -25,6 +28,21 @@ const galleryData = [
     id: 4,
     image: img4,
     text: "Undergraduate - BA honors in Mass Communication, University of Kelaniya"
+  },
+  {
+    id: 5,
+    image: sriyanthaImg,
+    text: "Learning from a legend: Mr. Sriyantha Mendis at LTRA, Dehiwala."
+  },
+  {
+    id: 6,
+    image: wasanthaImg,
+    text: "Media insights from the best: Veteran journalist Mr. Wasantha Rohana at LTRA, Dehiwala."
+  },
+  {
+    id: 7,
+    image: rasadareeImg,
+    text: "Mastering the art of voice with veteran dubbing artist Mrs. Rasadari Peiris at LTRA, Dehiwala."
   }
 ];
 
